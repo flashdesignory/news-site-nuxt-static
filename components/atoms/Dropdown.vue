@@ -16,7 +16,6 @@ export default {
         },
         handleChange(e) {
             this.isOpen = e.target.checked;
-            console.log(e.target.checked, this.isOpen)
         }
     }
 }
@@ -24,7 +23,7 @@ export default {
 
 <template>
     <div :class="styles.dropdown">
-        <input type="checkbox" id="navbar-dropdown-toggle" :class="styles['dropdown-toggle']" @change={handleChange} :checked="isOpen" />
+        <input type="checkbox" id="navbar-dropdown-toggle" :class="styles['dropdown-toggle']" @change="handleChange" :checked="isOpen" />
             <label for="navbar-dropdown-toggle" :class="styles['dropdown-label']">
                 <span :class="styles['dropdown-label-text']">More</span>
                 <div :class="[
