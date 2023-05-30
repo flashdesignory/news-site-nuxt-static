@@ -18,6 +18,11 @@ export default {
   <footer :class="styles['page-footer']">
     <div :class="styles['footer-row']">
       <div :class="styles['footer-column-center']">
+        <Sitemap />
+      </div>
+    </div>
+    <div :class="styles['footer-row']">
+      <div :class="styles['footer-column-center']">
         <div :class="styles['footer-links']">
           <ul :class="styles['footer-links-list']">
             <li :class="styles['footer-links-item']">
