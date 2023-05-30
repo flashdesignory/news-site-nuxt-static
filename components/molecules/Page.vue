@@ -14,7 +14,5 @@
 </script>
 
 <template>
-    <div v-for="section in content[route.name].sections">
-        {{ section.name }}
-    </div>
+    <Section v-for="section in content[route.name].sections" :data="section" />
 </template>
