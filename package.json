@@ -6,10 +6,15 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "serve": "http-server ./.output/public/ -p 9000 -c-1 --cors -o"
   },
   "devDependencies": {
     "@types/node": "^18",
     "nuxt": "^3.5.2"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "news-site-css": "^1.6.4"
   }
 }
