@@ -68,6 +68,9 @@
         <div :class="navbarStyles['navbar-active-path']">{{ route.path.split("/")[1] }}</div>
         <div :class="navbarStyles['navbar-content']">
             <Navlist :callback="handleClick"/>
+            <div :class="navbarStyles['navbar-icons']">
+              <SocialIcons />
+            </div>
         </div>
     </div>
 </template>
