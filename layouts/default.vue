@@ -1,5 +1,20 @@
 <script setup lang="js">
+  import { nextTick } from 'vue'
   const route = useRoute();
+
+  watch(route, value => {
+      if (document.getElementById('page')){
+        console.log(route);
+        if (!route.hash) {
+          document.getElementById('page').scrollTo(0, 0);
+        } else {
+          const elementId = route.hash.split("#")[1];
+          nextTick(() => {
+            document.getElementById(elementId).scrollIntoView()
+          })
+        }
+      }
+  }, {deep: true, immediate: true})
 </script>
 
 <script lang="js">
@@ -28,7 +43,7 @@
 </script>
 
 <template>
-    <div :class="styles.page">
+    <div :class="styles.page" id="page">
         <Header />
         <Navigation />
         <Message
