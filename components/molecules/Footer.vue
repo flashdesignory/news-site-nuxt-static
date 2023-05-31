@@ -3,12 +3,16 @@ import styles from "news-site-css/dist/footer.module.css";
 export default {
   data() {
     return {
-      styles
+      styles,
+      showPortal: false,
     }
   },
   methods: {
     openPortal() {
-      console.log("openPortal!")
+      this.showPortal = true;
+    },
+    closePortal() {
+      this.showPortal = false;
     }
   }
 }
@@ -59,4 +63,7 @@ export default {
       </div>
     </div>
   </footer>
+  <Teleport to="body">
+    <Dialog v-show="showPortal" :onClose="closePortal" />
+  </Teleport>
 </template>

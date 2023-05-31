@@ -24,20 +24,20 @@ export default {
 <template>
     <div :class="styles.dropdown">
         <input type="checkbox" id="navbar-dropdown-toggle" :class="styles['dropdown-toggle']" @change="handleChange" :checked="isOpen" />
-            <label for="navbar-dropdown-toggle" :class="styles['dropdown-label']">
-                <span :class="styles['dropdown-label-text']">More</span>
-                <div :class="[
-                    'animated-icon',
-                    'arrow-icon',
-                    'arrow',
-                    animatedIconClass
-                ]">
-                    <span class="animated-icon-inner" title="Arrow Icon">
-                        <span></span>
-                        <span></span>
-                    </span>
-                </div>
-            </label>
+        <label for="navbar-dropdown-toggle" :class="styles['dropdown-label']">
+            <span :class="styles['dropdown-label-text']">More</span>
+            <div :class="[
+                'animated-icon',
+                'arrow-icon',
+                'arrow',
+                animatedIconClass
+            ]">
+                <span class="animated-icon-inner" title="Arrow Icon">
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+        </label>
         <ul :class="styles['dropdown-content']" @click="closeDropdown">
             <slot />
         </ul>
