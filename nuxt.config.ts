@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+const path = require('path');
+
 export default defineNuxtConfig({
     ssr: false,
     /* router: {
@@ -19,5 +21,10 @@ export default defineNuxtConfig({
         '~/components/assets',
         '~/components/atoms',
         '~/components/molecules'
-    ]
+    ],
+    nitro: {
+        output: {
+          publicDir: path.join(__dirname, 'docs')
+        }
+    },
 })

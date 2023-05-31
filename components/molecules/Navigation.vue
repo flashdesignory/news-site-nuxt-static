@@ -13,7 +13,7 @@
           console.log('logIn clicked!');
         },
         openSitemap() {
-          console.log("openSitemap clicked!");
+          navigateTo("/");
         }
     },
   }
