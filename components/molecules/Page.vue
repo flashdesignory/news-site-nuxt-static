@@ -26,7 +26,7 @@ export default {
 </script>
 
 <template>
-    <Section v-for="section in content[route.name].sections" :data="section" />
+    <Section v-for="section in content[route.name].sections" :section="section" />
     <Teleport to="body">
         <Toast
             v-if="content[route.name].notification"

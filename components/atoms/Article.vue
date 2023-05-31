@@ -4,7 +4,7 @@ import articleStyles from "news-site-css/dist/article.module.css";
 
 export default {
     props: {
-        data: Object,
+        article: Object,
     },
     data() {
         return {
@@ -18,17 +18,17 @@ export default {
 <template>
     <article :class="[
         layoutStyles.column,
-        layoutStyles[data.class],
+        layoutStyles[article.class],
         articleStyles.article
     ]">
-        <ArticleHeader :headerClass="articleStyles['article-header']" :text="data.header" :link="data.url" />
+        <ArticleHeader :headerClass="articleStyles['article-header']" :text="article.header" :link="article.url" />
         <section :class="articleStyles['article-body']">
-            <ArticleImage :imageClass="articleStyles['article-image-container']" :image="data.image" :meta="data.meta" />
+            <ArticleImage :imageClass="articleStyles['article-image-container']" :image="article.image" :meta="article.meta" />
             <ArticleText :textClass="[
                 articleStyles['article-title'],
                 'truncate-singleline'
-            ]" :text="data.title" type="h3" />
-            <ArticleContent :type="data.type" :content="data.content" :display="data.display" />
+            ]" :text="article.title" type="h3" />
+            <ArticleContent :type="article.type" :content="article.content" :display="article.display" />
         </section>
     </article>
 </template>

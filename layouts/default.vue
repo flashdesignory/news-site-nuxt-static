@@ -4,7 +4,6 @@
 
   watch(route, value => {
       if (document.getElementById('page')){
-        console.log(route);
         if (!route.hash) {
           document.getElementById('page').scrollTo(0, 0);
         } else {
