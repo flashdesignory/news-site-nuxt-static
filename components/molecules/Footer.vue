@@ -55,11 +55,11 @@ export default {
     </div>
     <div :class="styles['footer-row']">
       <div :class="styles['footer-column-left']">
-        <SocialIcons />
+        <SocialIcons id="footer-social-icons"/>
       </div>
       <div :class="styles['footer-column-center']">© {{ new Date().getFullYear() }} No Rights Reserved</div>
       <div :class="styles['footer-column-right']">
-        <SettingsIcons :onClick="openPortal" />
+        <SettingsIcons :onClick="openPortal" id="footer-settings-icons"/>
       </div>
     </div>
   </footer>

@@ -69,7 +69,7 @@
         <div :class="navbarStyles['navbar-content']">
             <Navlist :callback="handleClick"/>
             <div :class="navbarStyles['navbar-icons']">
-              <SocialIcons />
+              <SocialIcons id="navbar-social-icons"/>
             </div>
         </div>
     </div>
