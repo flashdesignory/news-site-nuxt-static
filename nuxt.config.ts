@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const path = require('path');
+const development = process.env.NODE_ENV === "development";
 
 export default defineNuxtConfig({
     ssr: false,
@@ -28,6 +29,6 @@ export default defineNuxtConfig({
         }
     },
     app: {
-        baseURL: '/news-site-nuxt-static/' // baseURL: '/<repository>/'
+        baseURL: development ? "" : '/news-site-nuxt-static',
     }
 })
