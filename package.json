@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "http-server": "^14.1.1",
-    "news-site-css": "^1.6.4",
+    "news-site-css": "^1.6.5",
     "uuid": "^9.0.0"
   }
 }
