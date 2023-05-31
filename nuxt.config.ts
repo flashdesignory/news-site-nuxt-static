@@ -27,4 +27,7 @@ export default defineNuxtConfig({
           publicDir: path.join(__dirname, 'docs')
         }
     },
+    app: {
+        baseURL: '/news-site-nuxt-static/' // baseURL: '/<repository>/'
+    }
 })
