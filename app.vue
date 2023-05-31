@@ -1,3 +1,12 @@
+<script setup>
+  useHead({
+      title: "The Daily Broadcast",
+      htmlAttrs: {
+        lang: "en"
+      }
+    });
+  </script>
+
 <template>
   <NuxtLayout>
     <NuxtPage/>

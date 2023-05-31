@@ -14,10 +14,6 @@
         }
       }
   }, {deep: true, immediate: true})
-
-  useHead({
-    title: "The Daily Broadcast",
-  })
 </script>
 
 <script lang="js">
