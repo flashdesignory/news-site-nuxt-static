@@ -22,8 +22,6 @@ export default {
 }
 </script>
 
-//  const { title, description, actions } = notification;
-
 <template>
     <div :class="[toastStyles.toast, toastStyles.open]">
         <button id="close-toast-link" :class="toastStyles['toast-close-button']" @click="onClose">

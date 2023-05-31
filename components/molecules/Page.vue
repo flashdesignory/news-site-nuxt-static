@@ -1,5 +1,5 @@
 <script setup lang="js">
-const route = useRoute();
+    const route = useRoute();
 </script>
 
 <script lang="js">
@@ -29,7 +29,8 @@ export default {
     <Section v-for="section in content[route.name].sections" :data="section" />
     <Teleport to="body">
         <Toast
-            v-show="showPortal && content[route.name].notification"
+            v-if="content[route.name].notification"
+            v-show="showPortal"
             :onClose="closePortal"
             :onAccept="closePortal"
             :onReject="closePortal"
