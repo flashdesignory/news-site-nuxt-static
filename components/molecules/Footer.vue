@@ -34,36 +34,28 @@ export default {
                 id="footer-link-terms"
                 href="#"
                 :class="styles['footer-link']"
-              >
-                Terms of Use
-              </a>
+              > Terms of Use </a>
             </li>
             <li :class="styles['footer-links-item']">
               <a
                 id="footer-link-privacy"
                 href="#"
                 :class="styles['footer-link']"
-              >
-                Privacy Policy
-              </a>
+              > Privacy Policy </a>
             </li>
             <li :class="styles['footer-links-item']">
               <a
                 id="footer-link-sell"
                 href="#"
                 :class="styles['footer-link']"
-              >
-                Do Not Sell Or Share My Personal Information
-              </a>
+              > Do Not Sell Or Share My Personal Information </a>
             </li>
             <li :class="styles['footer-links-item']">
               <a
                 id="footer-link-adchoices"
                 href="#"
                 :class="styles['footer-link']"
-              >
-                Ad Choices
-              </a>
+              > Ad Choices </a>
             </li>
           </ul>
         </div>

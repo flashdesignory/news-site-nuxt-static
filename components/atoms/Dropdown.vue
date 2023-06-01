@@ -35,14 +35,7 @@ export default {
       :class="styles['dropdown-label']"
     >
       <span :class="styles['dropdown-label-text']">More</span>
-      <div
-        :class="[
-          'animated-icon',
-          'arrow-icon',
-          'arrow',
-          animatedIconClass
-        ]"
-      >
+      <div :class="['animated-icon', 'arrow-icon', 'arrow', animatedIconClass]">
         <span
           class="animated-icon-inner"
           title="Arrow Icon"

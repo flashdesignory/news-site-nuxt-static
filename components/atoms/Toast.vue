@@ -30,12 +30,7 @@ export default {
       @click="onClose"
     >
       <div
-        :class="[
-          toastStyles['toast-close-button-icon'],
-          'animated-icon',
-          'close-icon',
-          'hover'
-        ]"
+        :class="[toastStyles['toast-close-button-icon'], 'animated-icon', 'close-icon', 'hover']"
         title="Close Icon"
       >
         <span class="animated-icon-inner">
@@ -59,11 +54,7 @@ export default {
           v-for="action in notification.actions"
           :id="`toast-${action.type}-button`"
           :key="`toast-${action.type}-button`"
-          :class="[
-            buttonStyles.button,
-            buttonStyles[`${action.priority}-button`],
-            toastStyles['toast-actions-button']
-          ]"
+          :class="[buttonStyles.button, buttonStyles[`${action.priority}-button`], toastStyles['toast-actions-button']]"
           @click="callbacks[action.type]"
         >
           {{ action.name }}

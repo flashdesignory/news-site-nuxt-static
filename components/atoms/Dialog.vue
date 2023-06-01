@@ -30,7 +30,7 @@ export default {
 <template>
   <div
     id="settings"
-    :class="[ styles.dialog, styles.open ]"
+    :class="[styles.dialog, styles.open]"
   >
     <button
       id="close-dialog-link"
@@ -38,12 +38,7 @@ export default {
       @click="onClose"
     >
       <div
-        :class="[
-          styles['dialog-close-button-icon'],
-          'animated-icon',
-          'close-icon',
-          'hover'
-        ]"
+        :class="[styles['dialog-close-button-icon'], 'animated-icon', 'close-icon', 'hover']"
         title="Close Icon"
       >
         <span class="animated-icon-inner">

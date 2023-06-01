@@ -1,31 +1,31 @@
 <script lang="js">
-    import styles from "news-site-css/dist/navbar.module.css";
-    import { content } from "../../data/content";
+import styles from "news-site-css/dist/navbar.module.css";
+import { content } from "../../data/content";
 
-    const navItems = [];
-    const dropdownItems = [];
+const navItems = [];
+const dropdownItems = [];
 
-    Object.keys(content).forEach(key => {
-        if (content[key].priority === 1)
-            navItems.push(key);
-        else if (content[key].priority === 2)
-            dropdownItems.push(key);
-    });
+Object.keys(content).forEach(key => {
+    if (content[key].priority === 1)
+        navItems.push(key);
+    else if (content[key].priority === 2)
+        dropdownItems.push(key);
+});
 
-    export default {
-        props: {
-            callback: Function,
-            id: String,
-        },
-        data() {
-            return {
-                styles,
-                navItems,
-                dropdownItems,
-                content
-            }
+export default {
+    props: {
+        callback: Function,
+        id: String,
+    },
+    data() {
+        return {
+            styles,
+            navItems,
+            dropdownItems,
+            content
         }
     }
+}
 </script>
 
 <template>

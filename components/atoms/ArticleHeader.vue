@@ -1,11 +1,11 @@
 <script lang="js">
-    export default {
-        props: {
-            headerClass: String,
-            text: String,
-            link: String,
-        }
+export default {
+    props: {
+        headerClass: String,
+        text: String,
+        link: String,
     }
+}
 </script>
 
 <template>

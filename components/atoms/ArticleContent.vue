@@ -31,13 +31,7 @@ export default {
     v-if="type === 'list'"
     :class="styles['article-content']"
   >
-    <ul
-      :class="[
-        styles['article-list'],
-        styles.vertical,
-        { [styles[display]]: display }
-      ]"
-    >
+    <ul :class="[styles['article-list'], styles.vertical, { [styles[display]]: display }]">
       <li
         v-for="item in content"
         :key="item.id"
@@ -62,23 +56,14 @@ export default {
     v-if="type === 'articles-list'"
     :class="styles['article-list-content']"
   >
-    <ul
-      :class="[
-        styles['article-list'],
-        styles.vertical
-      ]"
-    >
+    <ul :class="[styles['article-list'], styles.vertical]">
       <li
         v-for="item in content"
         :key="item.id"
         :class="styles['article-list-item']"
       >
         <ArticleText
-          :text-class="[
-            styles['article-title'],
-            'truncate-multiline',
-            'truncate-multiline-3'
-          ]"
+          :text-class="[styles['article-title'], 'truncate-multiline', 'truncate-multiline-3']"
           :text="item.title"
           type="h3"
         />
@@ -99,10 +84,7 @@ export default {
   <!-- type === excerpt -->
   <ul
     v-if="type === 'excerpt'"
-    :class="[
-      styles['article-list'],
-      styles.horizontal
-    ]"
+    :class="[styles['article-list'], styles.horizontal]"
   >
     <li
       v-for="item in content"
@@ -126,10 +108,7 @@ export default {
   <!-- type === grid -->
   <div
     v-if="type === 'grid'"
-    :class="[
-      layoutStyles['grid-container'],
-      { [layoutStyles[display]]: display }
-    ]"
+    :class="[layoutStyles['grid-container'], { [layoutStyles[display]]: display }]"
   >
     <div
       v-for="item in content"

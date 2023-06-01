@@ -16,13 +16,7 @@ export default {
 </script>
 
 <template>
-  <article
-    :class="[
-      layoutStyles.column,
-      layoutStyles[article.class],
-      articleStyles.article
-    ]"
-  >
+  <article :class="[layoutStyles.column, layoutStyles[article.class], articleStyles.article]">
     <ArticleHeader
       :header-class="articleStyles['article-header']"
       :text="article.header"
@@ -35,10 +29,7 @@ export default {
         :meta="article.meta"
       />
       <ArticleText
-        :text-class="[
-          articleStyles['article-title'],
-          'truncate-singleline'
-        ]"
+        :text-class="[articleStyles['article-title'], 'truncate-singleline']"
         :text="article.title"
         type="h3"
       />

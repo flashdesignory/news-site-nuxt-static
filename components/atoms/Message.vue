@@ -22,12 +22,7 @@ export default {
       @click="onClose"
     >
       <div
-        :class="[
-          styles['message-close-button-icon'],
-          'animated-icon',
-          'close-icon',
-          'hover'
-        ]"
+        :class="[styles['message-close-button-icon'], 'animated-icon', 'close-icon', 'hover']"
         title="Close Icon"
       >
         <span class="animated-icon-inner">

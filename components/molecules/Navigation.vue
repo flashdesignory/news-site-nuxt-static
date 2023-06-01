@@ -1,22 +1,22 @@
 <script lang="js">
-  import navStyles from "news-site-css/dist/nav.module.css";
-  import buttonStyles from "news-site-css/dist/button.module.css";
-  export default {
-    data () {
-      return {
-        navStyles,
-        buttonStyles
+import navStyles from "news-site-css/dist/nav.module.css";
+import buttonStyles from "news-site-css/dist/button.module.css";
+export default {
+  data () {
+    return {
+      navStyles,
+      buttonStyles
+    }
+  },
+  methods: {
+      logIn() {
+        console.log('logIn clicked!');
+      },
+      openSitemap() {
+        navigateTo("/");
       }
-    },
-    methods: {
-        logIn() {
-          console.log('logIn clicked!');
-        },
-        openSitemap() {
-          navigateTo("/");
-        }
-    },
-  }
+  },
+}
 </script>
 
 <template>
@@ -31,10 +31,7 @@
       <div :class="navStyles['page-navigation-column-right']">
         <button
           id="login-button"
-          :class="[
-            buttonStyles.button, 
-            buttonStyles['secondary-button'], 
-            navStyles['nav-button']]"
+          :class="[buttonStyles.button, buttonStyles['secondary-button'], navStyles['nav-button']]"
           @click="logIn"
         >
           Log In

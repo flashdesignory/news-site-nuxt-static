@@ -16,10 +16,7 @@ export default {
 <template>
   <div
     v-if="tag"
-    :class="[
-      styles['article-image-tag'],
-      styles[tag]
-    ]"
+    :class="[styles['article-image-tag'], styles[tag]]"
   >
     <LightningIcon v-if="tag === 'breaking'" />
     <PlayIcon v-if="tag === 'watch'" />

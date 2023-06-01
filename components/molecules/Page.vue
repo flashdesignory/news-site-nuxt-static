@@ -1,5 +1,5 @@
 <script setup lang="js">
-    const route = useRoute();
+const route = useRoute();
 </script>
 
 <script lang="js">
@@ -12,7 +12,7 @@ export default {
         }
     },
     mounted() {
-        this.showPortal = content[this.$route.name].notification;      
+        this.showPortal = content[this.$route.name].notification;
     },
     methods: {
         openPortal() {

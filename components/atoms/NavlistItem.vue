@@ -1,18 +1,18 @@
 <script lang="js">
-  import styles from "news-site-css/dist/navbar.module.css";
-  export default {
-    props: {
-      label: String,
-      url: String,
-      callback: Function,
-      id: String,
-    },
-    data () {
-      return {
-        styles,
-      }
+import styles from "news-site-css/dist/navbar.module.css";
+export default {
+  props: {
+    label: String,
+    url: String,
+    callback: Function,
+    id: String,
+  },
+  data () {
+    return {
+      styles,
     }
   }
+}
 </script>
 
 <template>
