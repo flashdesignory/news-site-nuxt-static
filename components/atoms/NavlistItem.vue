@@ -5,6 +5,7 @@
       label: String,
       url: String,
       callback: Function,
+      id: String,
     },
     data () {
       return {
@@ -15,5 +16,5 @@
 </script>
 
 <template>
-    <NuxtLink :activeClass="styles['active']" :to="url" @click="callback"> {{ label }} </NuxtLink>
+    <NuxtLink :activeClass="styles['active']" :to="url" @click="callback" :id="id" > {{ label }} </NuxtLink>
 </template>
