@@ -4,11 +4,6 @@ const development = process.env.NODE_ENV === "development";
 
 export default defineNuxtConfig({
     ssr: false,
-    /* router: {
-        options: {
-          hashMode: true
-        }
-    }, */
     css: [
         /* '~/assets/styles/global.css', */
         'news-site-css/dist/variables.css',
