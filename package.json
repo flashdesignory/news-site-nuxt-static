@@ -6,8 +6,7 @@
     "dev": "nuxt dev",
     "generate": "NODE_ENV=production nuxt generate && touch docs/.nojekyll",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "serve": "http-server ./docs -p 9000 -c-1 --cors -o"
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
     "@types/node": "^18",
