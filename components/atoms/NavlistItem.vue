@@ -16,5 +16,12 @@
 </script>
 
 <template>
-    <NuxtLink :activeClass="styles['active']" :to="url" @click="callback" :id="id" > {{ label }} </NuxtLink>
+  <NuxtLink
+    :id="id"
+    :active-class="styles['active']"
+    :to="url"
+    @click="callback"
+  >
+    {{ label }}
+  </NuxtLink>
 </template>

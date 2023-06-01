@@ -26,14 +26,19 @@ export default {
 </script>
 
 <template>
-    <Section v-for="section in content[route.name].sections" :section="section" />
-    <Teleport to="body">
-        <Toast
-            v-if="content[route.name].notification"
-            v-show="showPortal"
-            :onClose="closePortal"
-            :onAccept="closePortal"
-            :onReject="closePortal"
-            :notification="content[route.name].notification" />
-    </Teleport>
+  <Section
+    v-for="section in content[route.name].sections"
+    :key="section.id"
+    :section="section"
+  />
+  <Teleport to="body">
+    <Toast
+      v-if="content[route.name].notification"
+      v-show="showPortal"
+      :on-close="closePortal"
+      :on-accept="closePortal"
+      :on-reject="closePortal"
+      :notification="content[route.name].notification"
+    />
+  </Teleport>
 </template>

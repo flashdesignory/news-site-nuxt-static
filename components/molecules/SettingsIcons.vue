@@ -14,15 +14,18 @@
 </script>
 
 <template>
-    <div :class="styles['icons-group']">
-        <ul :class="styles['icons-group-list']">
-            <li :class="styles['icons-group-item']">
-                <button @click="onClick" :id="`${id}-reduce-motion`">
-                    <div :class="styles['group-icon']">
-                        <ReducedMotionIcon />
-                    </div>
-                </button>
-            </li>
-        </ul>
-    </div>
+  <div :class="styles['icons-group']">
+    <ul :class="styles['icons-group-list']">
+      <li :class="styles['icons-group-item']">
+        <button
+          :id="`${id}-reduce-motion`"
+          @click="onClick"
+        >
+          <div :class="styles['group-icon']">
+            <ReducedMotionIcon />
+          </div>
+        </button>
+      </li>
+    </ul>
+  </div>
 </template>

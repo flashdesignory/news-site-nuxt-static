@@ -2,6 +2,7 @@
   import { nextTick } from 'vue'
   const route = useRoute();
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   watch(route, value => {
       if (document.getElementById('page')){
         if (!route.hash) {
@@ -42,17 +43,21 @@
 </script>
 
 <template>
-    <div :class="styles.page" id="page">
-        <Header />
-        <Navigation />
-        <Message
-            v-if="content[route.name].message"
-            v-show="showMessage"
-            :onClose="closeMessage"
-            :message="content[route.name].message" />
-        <Main>
-            <slot/>
-        </Main>
-        <Footer />
-    </div>
+  <div
+    id="page"
+    :class="styles.page"
+  >
+    <Header />
+    <Navigation />
+    <Message
+      v-if="content[route.name].message"
+      v-show="showMessage"
+      :on-close="closeMessage"
+      :message="content[route.name].message"
+    />
+    <Main>
+      <slot />
+    </Main>
+    <Footer />
+  </div>
 </template>

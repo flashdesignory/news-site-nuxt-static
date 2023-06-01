@@ -10,7 +10,7 @@
 </script>
 
 <template>
-    <main :class="styles['page-main']" >
-        <slot />
-    </main>
+  <main :class="styles['page-main']">
+    <slot />
+  </main>
 </template>

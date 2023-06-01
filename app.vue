@@ -20,6 +20,6 @@ useHead({
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
-  <div id="settings-container"></div>
-  <div id="notifications-container"></div>
+  <div id="settings-container" />
+  <div id="notifications-container" />
 </template>
