@@ -4,7 +4,7 @@
     "scripts": {
         "build": "nuxt build",
         "dev": "nuxt dev",
-        "generate": "NODE_ENV=production nuxt generate && touch docs/.nojekyll",
+        "generate": "nuxt generate && touch docs/.nojekyll",
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare",
         "lint:fix": "eslint . --fix",

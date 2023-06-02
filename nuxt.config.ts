@@ -27,6 +27,7 @@ export default defineNuxtConfig({
                 },
             ],
         },
+        baseURL: "./"
     },
     $production: {
         app: {
