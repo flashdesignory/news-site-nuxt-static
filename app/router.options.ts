@@ -1,8 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import type { RouterConfig } from "@nuxt/schema";
 import PageVue from "~/components/molecules/Page.vue";
 // https://router.vuejs.org/api/interfaces/routeroptions.html
 export default <RouterConfig>{
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     routes: (_routes) => [
         {
             name: "home",
