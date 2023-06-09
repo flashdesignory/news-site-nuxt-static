@@ -2,6 +2,7 @@
   import { nextTick, watch } from '#imports';
   import styles from "news-site-css/dist/layout.module.css";
   import { content } from "../data/content";
+  import { a11y } from '~/data/links';
 
   const showMessage = ref(false);
   const route = useRoute();
@@ -27,6 +28,10 @@
 </script>
 
 <template>
+  <NuxtLink 
+    :to="`${route.path}#content`"
+    class="skip-link"
+  >{{ a11y.skip.label }}</NuxtLink>
   <div
     id="page"
     :class="styles.page"
