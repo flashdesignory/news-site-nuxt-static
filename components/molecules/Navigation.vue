@@ -7,15 +7,19 @@ export default {
     return {
       login,
       navStyles,
-      buttonStyles
+      buttonStyles,
+      showPortal: false,
     }
   },
   methods: {
       logIn() {
         console.log('logIn clicked!');
       },
-      openSitemap() {
-        navigateTo("/");
+      openPortal() {
+        this.showPortal = true;
+      },
+      closePortal() {
+        this.showPortal = false;
       }
   },
 }
@@ -28,7 +32,7 @@ export default {
   >
     <div :class="navStyles['page-navigation-row']">
       <div :class="navStyles['page-navigation-column-left']">
-        <Navbar :callback="openSitemap" />
+        <Navbar :callback="openPortal" />
       </div>
       <div :class="navStyles['page-navigation-column-right']">
         <button
@@ -41,4 +45,10 @@ export default {
       </div>
     </div>
   </nav>
+  <Teleport to="body">
+    <Sidebar
+      v-show="showPortal"
+      :on-close="closePortal"
+    />
+  </Teleport>
 </template>
