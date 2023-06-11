@@ -8,18 +8,22 @@ export default {
       login,
       navStyles,
       buttonStyles,
-      showPortal: false,
+      showSidebar: false,
+      showLogin: false,
     }
   },
   methods: {
-      logIn() {
-        console.log('logIn clicked!');
+      openLogin() {
+        this.showLogin = true;
       },
-      openPortal() {
-        this.showPortal = true;
+      closeLogin() {
+        this.showLogin = false;
       },
-      closePortal() {
-        this.showPortal = false;
+      openSidebar() {
+        this.showSidebar = true;
+      },
+      closeSidebar() {
+        this.showSidebar = false;
       }
   },
 }
@@ -32,13 +36,13 @@ export default {
   >
     <div :class="navStyles['page-navigation-row']">
       <div :class="navStyles['page-navigation-column-left']">
-        <Navbar :callback="openPortal" />
+        <Navbar :callback="openSidebar" />
       </div>
       <div :class="navStyles['page-navigation-column-right']">
         <button
           id="login-button"
           :class="[buttonStyles.button, buttonStyles['secondary-button'], navStyles['nav-button']]"
-          @click="logIn"
+          @click="openLogin"
         >
           {{ login.label }}
         </button>
@@ -47,8 +51,14 @@ export default {
   </nav>
   <Teleport to="body">
     <Sidebar
-      v-show="showPortal"
-      :on-close="closePortal"
+      v-show="showSidebar"
+      :on-close="closeSidebar"
+    />
+  </Teleport>
+  <Teleport to="body">
+    <Modal
+      v-show="showLogin"
+      :on-close="closeLogin"
     />
   </Teleport>
 </template>
