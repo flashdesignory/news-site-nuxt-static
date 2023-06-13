@@ -70,7 +70,7 @@ export default {
             ]"
             :onClick="onCancel"
           >
-            Cancel
+            {{ login.cancel.label }}
           </button>
         </div>
       </form>

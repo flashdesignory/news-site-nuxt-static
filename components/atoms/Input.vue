@@ -34,7 +34,8 @@ export default {
       :class="[styles.input, styles['input-type-text']]"
       :type="type"
       autocomplete="off"
-      :placeholder="placeholder"
+      :placeholder="type !== 'submit' ? placeholder : undefined"
+      :value="type === 'submit' ? placeholder : undefined"
       :onInput="handleChange"
     >
   </div>
