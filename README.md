@@ -1,6 +1,12 @@
 # The Daily Broadcast
 
-preview: https://flashdesignory.github.io/news-site-nuxt-static/
+[![pages-build-deployment](https://github.com/flashdesignory/news-site-nuxt-static/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/flashdesignory/news-site-nuxt-static/actions/workflows/pages/pages-build-deployment)
+
+## Preview
+
+https://flashdesignory.github.io/news-site-nuxt-static/
+
+## Description
 
 > **_NOTE:_** This is not a typical use-case for Nuxt and we encourage developers to follow the [official documentation](https://nuxt.com/docs) for recommended usage of the framework.
 
