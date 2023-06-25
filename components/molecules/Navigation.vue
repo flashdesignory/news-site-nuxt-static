@@ -1,5 +1,5 @@
 <script lang="js">
-import { login } from "~/data/buttons";
+import { login } from "~/data/en/buttons";
 import navStyles from "news-site-css/dist/nav.module.css";
 import buttonStyles from "news-site-css/dist/button.module.css";
 export default {

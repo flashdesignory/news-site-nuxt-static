@@ -1,6 +1,6 @@
 <script lang="js">
-import { legal } from "~/data/links";
-import { footer } from "~/data/footer";
+import { legal } from "~/data/en/links";
+import { footer } from "~/data/en/footer";
 import styles from "news-site-css/dist/footer.module.css";
 export default {
   data() {

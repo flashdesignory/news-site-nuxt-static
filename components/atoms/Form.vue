@@ -2,7 +2,7 @@
 import formStyles from "news-site-css/dist/form.module.css";
 import buttonStyles from "news-site-css/dist/button.module.css";
 
-import { login } from "~/data/form";
+import { login } from "~/data/en/form";
 
 export default {
     props: {

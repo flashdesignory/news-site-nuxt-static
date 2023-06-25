@@ -1,8 +1,8 @@
 <script setup>
   import { nextTick, watch } from '#imports';
   import styles from "news-site-css/dist/layout.module.css";
-  import { content } from "../data/content";
-  import { a11y } from '~/data/links';
+  import { content } from "~/data/en/content";
+  import { a11y } from '~/data/en/links';
 
   const showMessage = ref(false);
   const route = useRoute();

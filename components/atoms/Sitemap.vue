@@ -1,6 +1,6 @@
 <script lang="js">
 import styles from "news-site-css/dist/sitemap.module.css";
-import { content } from "../../data/content";
+import { content } from "~/data/en/content"
 
 const keys = Object.keys(content);
 const navItems = keys.reduce(

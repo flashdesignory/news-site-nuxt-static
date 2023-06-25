@@ -1,7 +1,7 @@
 <script lang="js">
 import styles from "news-site-css/dist/modal.module.css";
 
-import { login } from "~/data/form";
+import { login } from "~/data/en/form";
 
 export default {
     props: {

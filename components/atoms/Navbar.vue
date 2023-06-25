@@ -3,7 +3,7 @@ const route = useRoute()
 </script>
 
 <script lang="js">
-import { content } from "~/data/content";
+import { content } from "~/data/en/content";
 import navStyles from "news-site-css/dist/nav.module.css";
 import navbarStyles from "news-site-css/dist/navbar.module.css";
 

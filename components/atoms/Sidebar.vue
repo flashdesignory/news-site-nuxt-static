@@ -1,6 +1,6 @@
 <script lang="js">
-import { sitemap } from "~/data/sidebar";
-import { content } from "~/data/content";
+import { sitemap } from "~/data/en/sidebar";
+import { content } from "~/data/en/content";
 import styles from "news-site-css/dist/sidebar.module.css";
 
 const keys = Object.keys(content);

@@ -1,5 +1,5 @@
 <script lang="js">
-import { more } from "~/data/buttons";
+import { more } from "~/data/en/buttons";
 import styles from "news-site-css/dist/dropdown.module.css";
 export default {
     props: {

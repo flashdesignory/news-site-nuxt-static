@@ -1,5 +1,5 @@
 <script lang="js">
-import { settings } from "~/data/dialog";
+import { settings } from "~/data/en/dialog";
 import styles from "news-site-css/dist/dialog.module.css";
 
 export default {

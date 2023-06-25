@@ -3,7 +3,7 @@ const route = useRoute();
 </script>
 
 <script lang="js">
-import { content } from "../../data/content";
+import { content } from "~/data/en/content";
 export default {
     data() {
         return {

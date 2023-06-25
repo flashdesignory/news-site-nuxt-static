@@ -1,6 +1,6 @@
 <script lang="js">
 import styles from "news-site-css/dist/navbar.module.css";
-import { content } from "../../data/content";
+import { content } from "~/data/en/content";
 
 const navItems = [];
 const dropdownItems = [];

@@ -1,5 +1,5 @@
 <script lang="js">
-import { social } from "~/data/links";
+import { social } from "~/data/en/links";
 import styles from "news-site-css/dist/icons-group.module.css";
 export default {
   props: {
