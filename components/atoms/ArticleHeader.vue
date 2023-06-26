@@ -5,7 +5,7 @@ export default {
         text: String,
         link: String,
     }
-}
+};
 </script>
 
 <template>

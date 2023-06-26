@@ -14,18 +14,18 @@ export default {
             formStyles,
             buttonStyles,
             login
-        }
+        };
     },
     methods: {
         handleSubmit(e) {
-           this.onSubmit(e);
-           e.preventDefault();
+            this.onSubmit(e);
+            e.preventDefault();
         },
         handleChange(e) {
             console.log(e.target.value);
         }
     }
-}
+};
 </script>
 
 <template>
@@ -58,16 +58,11 @@ export default {
             :label="login.submit.label"
             :type="login.submit.type"
             :container-class="formStyles['form-actions-item']"
-            :onChange="handleSubmit"
+            :on-change="handleSubmit"
           />
           <button
             id="form-reject-button"
-            :class="[
-              buttonStyles.button,
-              buttonStyles['secondary-button'],
-              buttonStyles.dark,
-              formStyles['form-actions-item']
-            ]"
+            :class="[buttonStyles.button, buttonStyles['secondary-button'], buttonStyles.dark, formStyles['form-actions-item']]"
             :onClick="onCancel"
           >
             {{ login.cancel.label }}

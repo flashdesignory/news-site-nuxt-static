@@ -1,5 +1,5 @@
 <script>
-import { provide } from 'vue';
+import { provide } from "vue";
 import { content as contentEn } from "~/data/en/content";
 import { content as contentJp } from "~/data/jp/content";
 import { content as contentAr } from "~/data/ar/content";
@@ -57,10 +57,10 @@ export default {
             forms: formsInput[lang],
         };
 
-        provide('data', value);
+        provide("data", value);
     },
     render() {
         return this.$slots.default();
-    }
-}
+    },
+};
 </script>

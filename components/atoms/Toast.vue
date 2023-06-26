@@ -14,12 +14,12 @@ export default {
             toastStyles,
             buttonStyles,
             callbacks: {
-                'accept': this.onAccept,
-                'reject': this.onReject,
+                "accept": this.onAccept,
+                "reject": this.onReject,
             }
-        }
+        };
     },
-}
+};
 </script>
 
 <template>

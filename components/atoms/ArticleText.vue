@@ -6,7 +6,7 @@ export default {
         textClass: [String, Array],
         type: String,
     }
-}
+};
 </script>
 
 <template>

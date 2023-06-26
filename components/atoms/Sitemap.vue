@@ -7,25 +7,25 @@ export default {
         onClick: Function
     },
     setup() {
-      const data = inject('data');
-      const { content } = data;
+        const data = inject("data");
+        const { content } = data;
 
-      const keys = Object.keys(content);
-      const navItems = keys.reduce(
-          (result, key) => {
-              result.push(key);
-              return result;
-          },
-          []
-      );
-      return { content, navItems }
+        const keys = Object.keys(content);
+        const navItems = keys.reduce(
+            (result, key) => {
+                result.push(key);
+                return result;
+            },
+            []
+        );
+        return { content, navItems };
     },
     data() {
         return {
             styles,
-        }
+        };
     }
-}
+};
 </script>
 
 <template>

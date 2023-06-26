@@ -3,34 +3,34 @@ import { inject } from "vue";
 import navStyles from "news-site-css/dist/nav.module.css";
 import buttonStyles from "news-site-css/dist/button.module.css";
 export default {
-  setup() {
-    const data = inject('data');
-    const { buttons } = data;
-    return { buttons }
-  },
-  data () {
-    return {
-      navStyles,
-      buttonStyles,
-      showSidebar: false,
-      showLogin: false,
-    }
-  },
-  methods: {
-      openLogin() {
-        this.showLogin = true;
-      },
-      closeLogin() {
-        this.showLogin = false;
-      },
-      openSidebar() {
-        this.showSidebar = true;
-      },
-      closeSidebar() {
-        this.showSidebar = false;
-      }
-  },
-}
+    setup() {
+        const data = inject("data");
+        const { buttons } = data;
+        return { buttons };
+    },
+    data () {
+        return {
+            navStyles,
+            buttonStyles,
+            showSidebar: false,
+            showLogin: false,
+        };
+    },
+    methods: {
+        openLogin() {
+            this.showLogin = true;
+        },
+        closeLogin() {
+            this.showLogin = false;
+        },
+        openSidebar() {
+            this.showSidebar = true;
+        },
+        closeSidebar() {
+            this.showSidebar = false;
+        }
+    },
+};
 </script>
 
 <template>

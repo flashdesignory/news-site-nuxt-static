@@ -7,15 +7,15 @@ export default {
         onClose: Function
     },
     setup() {
-      const data = inject('data');
-      const { settings } = data;
-      return { settings }
+        const data = inject("data");
+        const { settings } = data;
+        return { settings };
     },
     data() {
         return {
             styles,
             isChecked: false,
-        }
+        };
     },
     mounted() {
         this.isChecked = document.body.classList.contains("reduced-motion");
@@ -30,7 +30,7 @@ export default {
                 document.body.classList.remove("reduced-motion");
         }
     }
-}
+};
 </script>
 
 <template>

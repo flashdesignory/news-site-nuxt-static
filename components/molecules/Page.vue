@@ -1,16 +1,17 @@
 <script lang="js">
 import { inject } from "vue";
+import { useRoute } from "nuxt/app";
 export default {
     setup() {
-      const data = inject('data');
-      const { content } = data;
-      const route = useRoute();
-      return { route, content }
+        const data = inject("data");
+        const { content } = data;
+        const route = useRoute();
+        return { route, content };
     },
     data() {
         return {
             showPortal: false,
-        }
+        };
     },
     mounted() {
         this.showPortal = this.content[this.$route.name].notification;
@@ -23,7 +24,7 @@ export default {
             this.showPortal = false;
         }
     },
-}
+};
 </script>
 
 <template>
