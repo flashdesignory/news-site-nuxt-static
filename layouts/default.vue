@@ -1,5 +1,6 @@
 <script setup>
-import { ref, inject, useRoute, onMounted } from "vue";
+import { ref, inject, onMounted } from "vue";
+import { useRoute } from "nuxt/app";
 import { nextTick, watch } from "#imports";
 import styles from "news-site-css/dist/layout.module.css";
 

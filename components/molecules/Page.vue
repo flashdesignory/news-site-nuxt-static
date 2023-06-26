@@ -1,5 +1,6 @@
 <script lang="js">
-import { inject, useRoute } from "vue";
+import { inject } from "vue";
+import { useRoute } from "nuxt/app";
 export default {
     setup() {
         const data = inject("data");
