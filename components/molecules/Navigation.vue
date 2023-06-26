@@ -1,11 +1,15 @@
 <script lang="js">
-import { login } from "~/data/en/buttons";
+import { inject } from "vue";
 import navStyles from "news-site-css/dist/nav.module.css";
 import buttonStyles from "news-site-css/dist/button.module.css";
 export default {
+  setup() {
+    const data = inject('data');
+    const { buttons } = data;
+    return { buttons }
+  },
   data () {
     return {
-      login,
       navStyles,
       buttonStyles,
       showSidebar: false,
@@ -44,7 +48,7 @@ export default {
           :class="[buttonStyles.button, buttonStyles['secondary-button'], navStyles['nav-button']]"
           @click="openLogin"
         >
-          {{ login.label }}
+          {{ buttons.login.label }}
         </button>
       </div>
     </div>

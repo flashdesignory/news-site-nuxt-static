@@ -1,13 +1,17 @@
 <script lang="js">
-import { more } from "~/data/en/buttons";
+import { inject } from "vue";
 import styles from "news-site-css/dist/dropdown.module.css";
 export default {
     props: {
         animatedIconClass: String,
     },
+    setup() {
+      const data = inject('data');
+      const { buttons } = data;
+      return { buttons }
+    },
     data() {
         return {
-            more,
             styles,
             isOpen: false,
         }
@@ -36,7 +40,7 @@ export default {
       for="navbar-dropdown-toggle"
       :class="styles['dropdown-label']"
     >
-      <span :class="styles['dropdown-label-text']">{{ more.label }}</span>
+      <span :class="styles['dropdown-label-text']">{{ buttons.more.label }}</span>
       <div :class="['animated-icon', 'arrow-icon', 'arrow', animatedIconClass]">
         <span
           class="animated-icon-inner"

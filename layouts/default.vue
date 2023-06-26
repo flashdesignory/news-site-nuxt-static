@@ -1,37 +1,41 @@
 <script setup>
-  import { nextTick, watch } from '#imports';
-  import styles from "news-site-css/dist/layout.module.css";
-  import { content } from "~/data/en/content";
-  import { a11y } from '~/data/en/links';
+import { ref, inject } from 'vue'
+import { nextTick, watch } from '#imports';
+import styles from "news-site-css/dist/layout.module.css";
 
-  const showMessage = ref(false);
-  const route = useRoute();
+const showMessage = ref(false);
+const route = useRoute();
 
-  onMounted(() => {
-    showMessage.value = content[route.name].message;
-  })
+const data = inject('data');
+const { content, links } = data;
 
-  const closeMessage = () => { showMessage.value = false };
+onMounted(() => {
+  showMessage.value = content[route.name].message;
+});
 
-  watch(route, value => {
-      if (document.getElementById('page')){
-        if (!route.hash) {
-          document.getElementById('page').scrollTo(0, 0);
-        } else {
-          const elementId = route.hash.split("#")[1];
-          nextTick(() => {
-            document.getElementById(elementId).scrollIntoView()
-          })
-        }
-      }
-  }, {deep: true, immediate: true})
+const closeMessage = () => { showMessage.value = false };
+
+watch(route, value => {
+  if (document.getElementById('page')) {
+    if (!route.hash) {
+      document.getElementById('page').scrollTo(0, 0);
+    } else {
+      const elementId = route.hash.split("#")[1];
+      nextTick(() => {
+        document.getElementById(elementId).scrollIntoView()
+      })
+    }
+  }
+}, { deep: true, immediate: true });
 </script>
 
 <template>
-  <NuxtLink 
+  <NuxtLink
     :to="`${route.path}#content`"
     class="skip-link"
-  >{{ a11y.skip.label }}</NuxtLink>
+  >
+    {{ links.a11y.skip.label }}
+  </NuxtLink>
   <div
     id="page"
     :class="styles.page"

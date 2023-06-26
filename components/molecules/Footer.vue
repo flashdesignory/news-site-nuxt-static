@@ -1,12 +1,14 @@
 <script lang="js">
-import { legal } from "~/data/en/links";
-import { footer } from "~/data/en/footer";
+import { inject } from "vue";
 import styles from "news-site-css/dist/footer.module.css";
 export default {
+  setup() {
+    const data = inject('data');
+    const { footer, links } = data;
+    return { footer, links }
+  },
   data() {
     return {
-      legal,
-      footer,
       styles,
       showPortal: false,
     }
@@ -34,7 +36,7 @@ export default {
         <div :class="styles['footer-links']">
           <ul :class="styles['footer-links-list']">
             <li
-              v-for="(item, key) in legal"
+              v-for="(item, key) in links.legal"
               :key="`footer-links-item-${key}`"
               :class="styles['footer-links-item']">
               <a

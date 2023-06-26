@@ -1,27 +1,28 @@
 <script lang="js">
-import { sitemap } from "~/data/en/sidebar";
-import { content } from "~/data/en/content";
+import { inject } from "vue";
 import styles from "news-site-css/dist/sidebar.module.css";
-
-const keys = Object.keys(content);
-const navItems = keys.reduce(
-    (result, key) => {
-        result.push(key);
-        return result;
-    },
-    []
-);
 
 export default {
     props: {
         onClose: Function
     },
+    setup() {
+      const data = inject('data');
+      const { content, sitemap } = data;
+
+      const keys = Object.keys(content);
+      const navItems = keys.reduce(
+          (result, key) => {
+              result.push(key);
+              return result;
+          },
+          []
+      );
+      return { content, navItems, sitemap }
+    },
     data() {
         return {
-            sitemap,
             styles,
-            content,
-            navItems
         }
     }
 }
