@@ -1,5 +1,5 @@
 <script lang="js">
-import { inject } from "vue";
+import { inject, useRoute } from "vue";
 import navStyles from "news-site-css/dist/nav.module.css";
 import navbarStyles from "news-site-css/dist/navbar.module.css";
 
@@ -15,38 +15,38 @@ function calculateViewportHeight() {
 }
 
 export default {
-  props: {
-    callback: Function
-  },
-  setup() {
-      const data = inject('data');
-      const { content } = data;
-      const route = useRoute();
-      return { route, content }
-  },
-  data () {
-    return {
-      navbarStyles,
-      navStyles,
-      isOpen: false,
-    }
-  },
-  mounted() {
-    calculateViewportHeight();
-    window.addEventListener('resize', calculateViewportHeight);
-  },
-  unmounted() {
-    window.removeEventListener('resize', calculateViewportHeight);
-  },
-  methods: {
-    handleClick() {
-      this.isOpen = false;
+    props: {
+        callback: Function
     },
-    handleChange(e) {
-      this.isOpen = e.target.checked;
-    }
-  },
-}
+    setup() {
+        const data = inject("data");
+        const { content } = data;
+        const route = useRoute();
+        return { route, content };
+    },
+    data () {
+        return {
+            navbarStyles,
+            navStyles,
+            isOpen: false,
+        };
+    },
+    mounted() {
+        calculateViewportHeight();
+        window.addEventListener("resize", calculateViewportHeight);
+    },
+    unmounted() {
+        window.removeEventListener("resize", calculateViewportHeight);
+    },
+    methods: {
+        handleClick() {
+            this.isOpen = false;
+        },
+        handleChange(e) {
+            this.isOpen = e.target.checked;
+        }
+    },
+};
 </script>
 
 <template>
@@ -81,7 +81,7 @@ export default {
       <LogoIcon />
     </button>
     <div :class="navbarStyles['navbar-active-path']">
-      {{ content[route.path.split("/")[1]]?.name ?? '' }}
+      {{ content[route.path.split("/")[1]]?.name ?? "" }}
     </div>
     <div :class="navbarStyles['navbar-content']">
       <Navlist

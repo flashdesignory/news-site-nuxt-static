@@ -6,15 +6,15 @@ export default {
         animatedIconClass: String,
     },
     setup() {
-      const data = inject('data');
-      const { buttons } = data;
-      return { buttons }
+        const data = inject("data");
+        const { buttons } = data;
+        return { buttons };
     },
     data() {
         return {
             styles,
             isOpen: false,
-        }
+        };
     },
     methods: {
         closeDropdown() {
@@ -24,7 +24,7 @@ export default {
             this.isOpen = e.target.checked;
         }
     }
-}
+};
 </script>
 
 <template>

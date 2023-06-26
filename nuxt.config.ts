@@ -32,11 +32,11 @@ export default defineNuxtConfig({
                 },
             ],
         },
-        baseURL: "./"
+        baseURL: "./",
     },
     $production: {
         app: {
-            baseURL:"/news-site-nuxt-static/",
+            baseURL: "/news-site-nuxt-static/",
         },
     },
 });

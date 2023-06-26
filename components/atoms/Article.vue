@@ -1,5 +1,5 @@
 <script lang="js">
-import layoutStyles from "news-site-css/dist/layout.module.css"
+import layoutStyles from "news-site-css/dist/layout.module.css";
 import articleStyles from "news-site-css/dist/article.module.css";
 
 export default {
@@ -10,9 +10,9 @@ export default {
         return {
             layoutStyles,
             articleStyles
-        }
+        };
     }
-}
+};
 </script>
 
 <template>

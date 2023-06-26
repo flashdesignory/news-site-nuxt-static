@@ -7,25 +7,25 @@ export default {
         onClose: Function
     },
     setup() {
-      const data = inject('data');
-      const { content, sitemap } = data;
+        const data = inject("data");
+        const { content, sitemap } = data;
 
-      const keys = Object.keys(content);
-      const navItems = keys.reduce(
-          (result, key) => {
-              result.push(key);
-              return result;
-          },
-          []
-      );
-      return { content, navItems, sitemap }
+        const keys = Object.keys(content);
+        const navItems = keys.reduce(
+            (result, key) => {
+                result.push(key);
+                return result;
+            },
+            []
+        );
+        return { content, navItems, sitemap };
     },
     data() {
         return {
             styles,
-        }
+        };
     }
-}
+};
 </script>
 
 <template>
@@ -75,4 +75,3 @@ export default {
     </section>
   </div>
 </template>
-  

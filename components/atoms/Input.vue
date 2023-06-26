@@ -13,14 +13,14 @@ export default {
     data() {
         return {
             styles,
-        }
+        };
     },
     methods: {
         handleChange(e) {
-           this.onChange(e);
+            this.onChange(e);
         }
     }
-}
+};
 </script>
 
 <template>

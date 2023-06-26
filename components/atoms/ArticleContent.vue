@@ -12,9 +12,9 @@ export default {
         return {
             styles,
             layoutStyles
-        }
+        };
     }
-}
+};
 </script>
 
 <template>

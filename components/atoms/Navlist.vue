@@ -1,5 +1,5 @@
 <script lang="js">
-import { inject } from "vue";
+import { inject, useRoute } from "vue";
 import styles from "news-site-css/dist/navbar.module.css";
 
 export default {
@@ -8,28 +8,28 @@ export default {
         id: String,
     },
     setup() {
-      const data = inject('data');
-      const { content } = data;
+        const data = inject("data");
+        const { content } = data;
 
-      const navItems = [];
-      const dropdownItems = [];
+        const navItems = [];
+        const dropdownItems = [];
 
-      Object.keys(content).forEach(key => {
-          if (content[key].priority === 1)
-              navItems.push(key);
-          else if (content[key].priority === 2)
-              dropdownItems.push(key);
-      });
+        Object.keys(content).forEach(key => {
+            if (content[key].priority === 1)
+                navItems.push(key);
+            else if (content[key].priority === 2)
+                dropdownItems.push(key);
+        });
 
-      const route = useRoute();
-      return { route, content, navItems, dropdownItems }
-  },
+        const route = useRoute();
+        return { route, content, navItems, dropdownItems };
+    },
     data() {
         return {
             styles,
-        }
+        };
     }
-}
+};
 </script>
 
 <template>

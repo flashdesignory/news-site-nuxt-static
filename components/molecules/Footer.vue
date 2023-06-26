@@ -2,26 +2,26 @@
 import { inject } from "vue";
 import styles from "news-site-css/dist/footer.module.css";
 export default {
-  setup() {
-    const data = inject('data');
-    const { footer, links } = data;
-    return { footer, links }
-  },
-  data() {
-    return {
-      styles,
-      showPortal: false,
-    }
-  },
-  methods: {
-    openPortal() {
-      this.showPortal = true;
+    setup() {
+        const data = inject("data");
+        const { footer, links } = data;
+        return { footer, links };
     },
-    closePortal() {
-      this.showPortal = false;
+    data() {
+        return {
+            styles,
+            showPortal: false,
+        };
+    },
+    methods: {
+        openPortal() {
+            this.showPortal = true;
+        },
+        closePortal() {
+            this.showPortal = false;
+        }
     }
-  }
-}
+};
 </script>
 
 <template>
@@ -38,7 +38,8 @@ export default {
             <li
               v-for="(item, key) in links.legal"
               :key="`footer-links-item-${key}`"
-              :class="styles['footer-links-item']">
+              :class="styles['footer-links-item']"
+            >
               <a
                 :id="`footer-link-${key}`"
                 :href="item.href"

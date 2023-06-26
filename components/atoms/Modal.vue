@@ -11,7 +11,7 @@ export default {
         return {
             styles,
             login
-        }
+        };
     },
     methods: {
         handleSubmit(e) {
@@ -20,7 +20,7 @@ export default {
             this.onClose();
         },
     }
-}
+};
 </script>
 
 <template>
