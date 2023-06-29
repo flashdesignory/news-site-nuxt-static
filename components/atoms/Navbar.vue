@@ -20,8 +20,7 @@ export default {
         callback: Function
     },
     setup() {
-        const data = inject("data");
-        const { content } = data;
+        const { content } = inject("data");
         const route = useRoute();
         return { route, content };
     },

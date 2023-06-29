@@ -7,8 +7,7 @@ export default {
         onClose: Function
     },
     setup() {
-        const data = inject("data");
-        const { content, sitemap } = data;
+        const { content, sitemap } = inject("data");
 
         const keys = Object.keys(content);
         const navItems = keys.reduce(

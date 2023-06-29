@@ -3,8 +3,7 @@ import { inject } from "vue";
 import { useRoute } from "nuxt/app";
 export default {
     setup() {
-        const data = inject("data");
-        const { content } = data;
+        const { content } = inject("data");
         const route = useRoute();
         return { route, content };
     },

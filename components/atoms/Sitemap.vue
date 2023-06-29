@@ -7,8 +7,7 @@ export default {
         onClick: Function
     },
     setup() {
-        const data = inject("data");
-        const { content } = data;
+        const { content } = inject("data");
 
         const keys = Object.keys(content);
         const navItems = keys.reduce(

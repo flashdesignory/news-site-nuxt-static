@@ -3,8 +3,7 @@ import { inject } from "vue";
 import styles from "news-site-css/dist/footer.module.css";
 export default {
     setup() {
-        const data = inject("data");
-        const { footer, links } = data;
+        const { footer, links } = inject("data");
         return { footer, links };
     },
     data() {

@@ -9,8 +9,7 @@ export default {
         id: String,
     },
     setup() {
-        const data = inject("data");
-        const { content } = data;
+        const { content } = inject("data");
 
         const navItems = [];
         const dropdownItems = [];

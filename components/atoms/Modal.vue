@@ -1,16 +1,18 @@
 <script lang="js">
+import { inject } from "vue";
 import styles from "news-site-css/dist/modal.module.css";
-
-import { login } from "~/data/en/form";
 
 export default {
     props: {
         onClose: Function,
     },
+    setup() {
+        const { forms } = inject("data");
+        return { login: forms.login };
+    },
     data() {
         return {
             styles,
-            login
         };
     },
     methods: {

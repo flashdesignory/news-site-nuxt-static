@@ -7,8 +7,7 @@ import styles from "news-site-css/dist/layout.module.css";
 const showMessage = ref(false);
 const route = useRoute();
 
-const data = inject("data");
-const { content, links } = data;
+const { content, links } = inject("data");
 
 onMounted(() => {
     showMessage.value = content[route.name].message;

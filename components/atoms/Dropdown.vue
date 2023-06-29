@@ -6,8 +6,7 @@ export default {
         animatedIconClass: String,
     },
     setup() {
-        const data = inject("data");
-        const { buttons } = data;
+        const { buttons } = inject("data");
         return { buttons };
     },
     data() {

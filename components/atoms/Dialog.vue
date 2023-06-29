@@ -7,8 +7,7 @@ export default {
         onClose: Function
     },
     setup() {
-        const data = inject("data");
-        const { settings } = data;
+        const { settings } = inject("data");
         return { settings };
     },
     data() {

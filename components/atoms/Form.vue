@@ -1,19 +1,21 @@
 <script lang="js">
+import { inject } from "vue";
 import formStyles from "news-site-css/dist/form.module.css";
 import buttonStyles from "news-site-css/dist/button.module.css";
-
-import { login } from "~/data/en/form";
 
 export default {
     props: {
         onCancel: Function,
         onSubmit: Function,
     },
+    setup() {
+        const { forms } = inject("data");
+        return { login: forms.login };
+    },
     data() {
         return {
             formStyles,
             buttonStyles,
-            login
         };
     },
     methods: {

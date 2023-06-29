@@ -4,8 +4,7 @@ import navStyles from "news-site-css/dist/nav.module.css";
 import buttonStyles from "news-site-css/dist/button.module.css";
 export default {
     setup() {
-        const data = inject("data");
-        const { buttons } = data;
+        const { buttons } = inject("data");
         return { buttons };
     },
     data () {
