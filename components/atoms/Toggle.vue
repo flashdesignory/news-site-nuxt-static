@@ -3,6 +3,7 @@ import styles from "news-site-css/dist/toggle.module.css";
 
 export default {
     props: {
+        id: String,
         label: String,
         onChange: Function,
         checked: Boolean,
@@ -11,7 +12,7 @@ export default {
         return {
             styles,
             isSelected: false,
-        };
+        }
     },
     mount() {
         this.isSelected = this.checked;
@@ -22,28 +23,20 @@ export default {
             this.onChange(e);
         }
     }
-};
+}
 </script>
 
 <template>
-  <div :class="styles['toggle-outer']">
-    <div :class="styles['toggle-description']">
-      {{ label }}
+    <div :class="styles['toggle-outer']">
+        <div :class="styles['toggle-description']">
+            {{ label }}
+        </div>
+        <div :class="styles['toggle-container']">
+            <label :class="styles.label" :for="`${id}-toggle`">
+                <input :id="`${id}-toggle`" type="checkbox" :checked="isSelected" @change="handleChange" />
+                <span :class="styles.switch" />
+                <div class="visually-hidden">selected: {{ isSelected ? "true" : "false" }}</div>
+            </label>
+        </div>
     </div>
-    <div :class="styles['toggle-container']">
-      <label
-        :class="styles.label"
-        for="reduced-motion-toggle"
-      >
-        <input
-          id="reduced-motion-toggle"
-          type="checkbox"
-          :checked="isSelected"
-          @change="handleChange"
-        >
-        <span :class="styles.switch" />
-        <div class="visually-hidden">selected: {{ isSelected ? "true" : "false" }}</div>
-      </label>
-    </div>
-  </div>
 </template>
