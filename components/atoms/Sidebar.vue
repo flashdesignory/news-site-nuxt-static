@@ -65,7 +65,7 @@ export default {
             :key="`sidebar-section${section.id}`"
             :class="styles['sidebar-list-item']"
           >
-            <NuxtLink :to="`${content[key].url}#${section.id}`">
+            <NuxtLink :to="`${content[key].url}#${section.id}`" @click="onClose">
               {{ section.name }}
             </NuxtLink>
           </li>
