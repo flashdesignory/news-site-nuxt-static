@@ -38,5 +38,6 @@ export default defineNuxtConfig({
         app: {
             baseURL: "/news-site-nuxt-static/",
         },
+        sourcemap: true
     },
 });
